@@ -16,7 +16,8 @@ export const theme = extendTheme({
   styles: {
     global: (props: any) => ({
       "html, body": {
-        bg: props.colorMode === "dark" ? "gray.900" : "white.50",
+        // bg: props.colorMode === "dark" ? "gray.900" : "white.50",
+        bg: "gray.900",
         height: "100%",
         fontFamily: "Nunito",
       },
