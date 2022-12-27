@@ -1,9 +1,11 @@
-import { Button, Flex, Image, Link, useColorMode } from "@chakra-ui/react"
+import { Button, Flex, Image, Link, useColorMode, useDisclosure } from "@chakra-ui/react"
+import { FaWhatsapp } from "react-icons/fa";
+import { useAboutMe } from "../context/AboutMeContext";
 import User from '/user.png';
 
 export const Header = () => {
   // const darkmode
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <>
@@ -23,18 +25,19 @@ export const Header = () => {
             <Image src={User} alt='User' />
           </Flex>
 
-          <Link>Serviços</Link>
-          <Link>Últimos trabalhos</Link>
+          <Link display={["none", "block"]}>Serviços</Link>
+          <Link display={["none", "block"]}>Últimos trabalhos</Link>
         </Flex>
 
         <Flex alignItems='center' gap='20px'>
           <Button
-            w='240px'
-            h='60px'
+            rightIcon={<FaWhatsapp />}
+            w={['150px', '240px']}
+            h={['45px', '60px']}
             border="1px solid #fff"
             borderColor='white.50'
             bg='transparent'
-            borderRadius="15px"
+            borderRadius={["10px", "15px"]}
           >
             Contato
           </Button>
