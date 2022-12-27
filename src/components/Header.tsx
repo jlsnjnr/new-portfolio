@@ -24,9 +24,6 @@ export const Header = () => {
           >
             <Image src={User} alt='User' />
           </Flex>
-
-          <Link display={["none", "block"]}>Serviços</Link>
-          <Link display={["none", "block"]}>Últimos trabalhos</Link>
         </Flex>
 
         <Flex alignItems='center' gap='20px'>
