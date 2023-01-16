@@ -45,7 +45,7 @@ export const Services = () => {
           gap="15px"
           backgroundPosition="right"
           backgroundRepeat='no-repeat'
-          backgroundImage={['none', '/la.png']}
+          backgroundImage={['none', '/home.png']}
           my="50px"
         >
           <Flex

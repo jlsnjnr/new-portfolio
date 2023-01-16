@@ -7,6 +7,7 @@ import {
   keyframes,
   usePrefersReducedMotion,
   SimpleGrid,
+  Image,
 } from "@chakra-ui/react";
 import { FiTrendingUp } from "react-icons/fi";
 
@@ -68,7 +69,9 @@ export const LastJobs = () => {
             my="15px"
             h="283px"
           >
+            <Image borderRadius="10px" w="full" objectFit='cover' src='/poke.png' />
           </Flex>
+
           <Flex
             transition="0.5s"
             _hover={{ bg: "rgba(14, 14, 14, 0.5)" }}
@@ -77,30 +80,63 @@ export const LastJobs = () => {
             my="15px"
             h="207px"
           >
+            <Image borderRadius="10px" w="full" objectFit='cover' src='/dashgo.png' />
           </Flex>
         </Flex>
 
         <Flex flexDir="column">
           <Flex
             transition="0.5s"
-            _hover={{ bg: "rgba(14, 14, 14, 0.5)" }}
-            bg="#0E0E0E"
             borderRadius="10px"
             maxW="100%"
             my="15px"
             h="207px"
+            pos='relative'
           >
+            <Image
+              borderRadius="10px"
+              w="full"
+              objectFit='cover'
+              src='/trip.png'
+            />
+            <Flex
+              alignItems='center'
+              justify='center'
+              borderRadius="10px"
+              transition="0.3s ease all"
+              pos='absolute'
+              w="full"
+              h="207px"
+              boxSizing="border-box"
+              display='block'
+              overflow="hidden"
+              bg="rgba(14, 14, 14, 0.5)"
+              _focusWithin={{
+                marginTop: "-120px",
+              }}
+              _hover={{
+                p: "50px",
+              }}
+            >
+              <Heading
+                transition="0.3s ease all"
+                display='block'
+                marginTop="70px"
+              >
+                link
+              </Heading>
+            </Flex>
           </Flex>
           <Flex
             transition="0.5s"
             _hover={{ bg: "rgba(14, 14, 14, 0.5)" }}
             bg="#0E0E0E"
             borderRadius="10px"
-
             maxW="100%"
             my="15px"
             h="283px"
           >
+            <Image borderRadius="10px" w="full" objectFit='cover' src='/hbo-max.png' />
           </Flex>
         </Flex>
 
@@ -114,6 +150,7 @@ export const LastJobs = () => {
             my="15px"
             h="253px"
           >
+            <Image borderRadius="10px" w="full" objectFit='cover' src='/dt-money.png' />
           </Flex>
           <Flex
             transition="0.5s"
@@ -124,6 +161,7 @@ export const LastJobs = () => {
             my="15px"
             h="237px"
           >
+            <Image borderRadius="10px" w="full" objectFit='cover' src='/ignews.png' />
           </Flex>
         </Flex>
       </SimpleGrid>
