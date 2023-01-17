@@ -70,7 +70,7 @@ export const LastJobs = () => {
             borderRadius="10px"
             position='relative'
             my="15px"
-            h="283px"
+            h={["100%", "283px"]}
             w="full"
             bg="#0E0E0E"
           >
@@ -118,7 +118,7 @@ export const LastJobs = () => {
             borderRadius="10px"
             position='relative'
             my="15px"
-            h="207px"
+            h={["100%", "207px"]}
             w="full"
             bg="#0E0E0E"
           >
@@ -248,7 +248,7 @@ export const LastJobs = () => {
             borderRadius="10px"
             position='relative'
             my="15px"
-            h="277px"
+            h={["100%", "277px"]}
             w="full"
             bg="#0E0E0E"
           >
@@ -290,7 +290,7 @@ export const LastJobs = () => {
             borderRadius="10px"
             position='relative'
             my="15px"
-            h="213px"
+            h={["100%", "213px"]}
             w="full"
             bg="#0E0E0E"
           >
