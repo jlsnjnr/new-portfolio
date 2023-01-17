@@ -8,7 +8,10 @@ import {
   usePrefersReducedMotion,
   SimpleGrid,
   Image,
+  Stack,
+  Link,
 } from "@chakra-ui/react";
+import { useState } from 'react'
 import { FiTrendingUp } from "react-icons/fi";
 
 const spin = keyframes`
@@ -62,106 +65,257 @@ export const LastJobs = () => {
 
         <Flex flexDir="column">
           <Flex
-            transition="0.5s"
-            _hover={{ bg: "rgba(14, 14, 14, 0.5)" }}
-            bg="#0E0E0E"
+            transition="0.5s !important"
             borderRadius="10px"
+            position='relative'
             my="15px"
             h="283px"
-          >
-            <Image borderRadius="10px" w="full" objectFit='cover' src='/poke.png' />
-          </Flex>
-
-          <Flex
-            transition="0.5s"
-            _hover={{ bg: "rgba(14, 14, 14, 0.5)" }}
+            w="full"
             bg="#0E0E0E"
-            borderRadius="10px"
-            my="15px"
-            h="207px"
           >
-            <Image borderRadius="10px" w="full" objectFit='cover' src='/dashgo.png' />
-          </Flex>
-        </Flex>
+            <Image display='block' width='100%' height='auto' borderRadius="10px" w="full" objectFit='cover' src='/poke.png' />
 
-        <Flex flexDir="column">
-          <Flex
-            transition="0.5s"
-            borderRadius="10px"
-            maxW="100%"
-            my="15px"
-            h="207px"
-            pos='relative'
-          >
-            <Image
-              borderRadius="10px"
-              w="full"
-              objectFit='cover'
-              src='/trip.png'
-            />
-            <Flex
-              alignItems='center'
-              justify='center'
-              borderRadius="10px"
-              transition="0.3s ease all"
-              pos='absolute'
-              w="full"
-              h="207px"
-              boxSizing="border-box"
-              display='block'
-              overflow="hidden"
-              bg="rgba(14, 14, 14, 0.5)"
-              _focusWithin={{
-                marginTop: "-120px",
-              }}
+            <Box position='absolute'
+              top='0'
+              bottom='0'
+              left='0'
+              right='0'
+              height='100%'
+              width='100%'
+              opacity='0'
+              transition='.5s ease'
+              backgroundColor='rgba(14, 14, 14, 0.5)'
+
               _hover={{
-                p: "50px",
+                opacity: 1,
               }}
+
             >
-              <Heading
-                transition="0.3s ease all"
-                display='block'
-                marginTop="70px"
-              >
-                link
-              </Heading>
-            </Flex>
+              <Link
+                color='white'
+                font-size='20px'
+                position='absolute'
+                top='50%'
+                left='50%'
+                transform='translate(-50%, -50%)'
+                text-align='center'
+                href="https://pokemon-api-k926.vercel.app/"
+                target='_blank'
+              >Conheça o projeto</Link>
+            </Box>
           </Flex>
+
           <Flex
-            transition="0.5s"
-            _hover={{ bg: "rgba(14, 14, 14, 0.5)" }}
-            bg="#0E0E0E"
+            transition="0.5s !important"
             borderRadius="10px"
-            maxW="100%"
+            position='relative'
             my="15px"
-            h="283px"
+            h="207px"
+            w="full"
+            bg="#0E0E0E"
           >
-            <Image borderRadius="10px" w="full" objectFit='cover' src='/hbo-max.png' />
+            <Image display='block' width='100%' height='auto' borderRadius="10px" w="full" objectFit='cover' src='/dashgo.png' />
+
+            <Box position='absolute'
+              top='0'
+              bottom='0'
+              left='0'
+              right='0'
+              height='100%'
+              width='100%'
+              borderRadius="10px"
+              opacity='0'
+              transition='.5s ease'
+              backgroundColor='rgba(14, 14, 14, 0.5)'
+
+              _hover={{
+                opacity: 1,
+              }}
+
+            >
+              <Link
+                color='white'
+                font-size='20px'
+                position='absolute'
+                top='50%'
+                left='50%'
+                transform='translate(-50%, -50%)'
+                text-align='center'
+                href="https://dashgo-ashy.vercel.app/"
+                target='_blank'
+              >Conheça o projeto</Link>
+            </Box>
           </Flex>
         </Flex>
 
         <Flex flexDir="column">
           <Flex
-            transition="0.5s"
-            _hover={{ bg: "rgba(14, 14, 14, 0.5)" }}
-            bg="#0E0E0E"
+            transition="0.5s !important"
             borderRadius="10px"
-            maxW="100%"
+            position='relative'
+            my="15px"
+            h="207px"
+            w="full"
+            bg="#0E0E0E"
+          >
+            <Image display='block' width='100%' height='auto' borderRadius="10px" w="full" objectFit='cover' src='/trip.png' />
+
+            <Box position='absolute'
+              top='0'
+              bottom='0'
+              left='0'
+              right='0'
+              height='100%'
+              width='100%'
+              borderRadius="10px"
+              opacity='0'
+              transition='.5s ease'
+              backgroundColor='rgba(14, 14, 14, 0.5)'
+
+              _hover={{
+                opacity: 1,
+              }}
+
+            >
+              <Link
+                color='white'
+                font-size='20px'
+                position='absolute'
+                top='50%'
+                left='50%'
+                transform='translate(-50%, -50%)'
+                text-align='center'
+                href="https://world-trip-gamma.vercel.app/"
+                target='_blank'
+              >Conheça o projeto</Link>
+            </Box>
+          </Flex>
+
+          <Flex
+            transition="0.5s !important"
+            borderRadius="10px"
+            position='relative'
+            my="15px"
+            h="283px"
+            w="full"
+            bg="#0E0E0E"
+          >
+            <Image display='block' width='100%' height='auto' borderRadius="10px" w="full" objectFit='cover' src='/hbo-max.png' />
+
+            <Box position='absolute'
+              top='0'
+              bottom='0'
+              left='0'
+              right='0'
+              height='100%'
+              width='100%'
+              borderRadius="10px"
+              opacity='0'
+              transition='.5s ease'
+              backgroundColor='rgba(14, 14, 14, 0.5)'
+
+              _hover={{
+                opacity: 1,
+              }}
+
+            >
+              <Link
+                color='white'
+                font-size='20px'
+                position='absolute'
+                top='50%'
+                left='50%'
+                transform='translate(-50%, -50%)'
+                text-align='center'
+                href="https://hbo-max-clone.vercel.app/"
+                target='_blank'
+              >Conheça o projeto</Link>
+            </Box>
+          </Flex>
+        </Flex>
+
+        <Flex flexDir="column">
+          <Flex
+            transition="0.5s !important"
+            borderRadius="10px"
+            position='relative'
             my="15px"
             h="253px"
-          >
-            <Image borderRadius="10px" w="full" objectFit='cover' src='/dt-money.png' />
-          </Flex>
-          <Flex
-            transition="0.5s"
-            _hover={{ bg: "rgba(14, 14, 14, 0.5)" }}
+            w="full"
             bg="#0E0E0E"
+          >
+            <Image display='block' width='100%' height='auto' borderRadius="10px" w="full" objectFit='cover' src='/dt-money.png' />
+
+            <Box position='absolute'
+              top='0'
+              bottom='0'
+              left='0'
+              right='0'
+              height='100%'
+              width='100%'
+              borderRadius="10px"
+              opacity='0'
+              transition='.5s ease'
+              backgroundColor='rgba(14, 14, 14, 0.5)'
+
+              _hover={{
+                opacity: 1,
+              }}
+
+            >
+              <Link
+                color='white'
+                font-size='20px'
+                position='absolute'
+                top='50%'
+                left='50%'
+                transform='translate(-50%, -50%)'
+                text-align='center'
+                href="https://dt-money-kappa.vercel.app/"
+                target='_blank'
+              >Conheça o projeto</Link>
+            </Box>
+          </Flex>
+
+          <Flex
+            transition="0.5s !important"
             borderRadius="10px"
-            maxW="100%"
+            position='relative'
             my="15px"
             h="237px"
+            w="full"
+            bg="#0E0E0E"
           >
-            <Image borderRadius="10px" w="full" objectFit='cover' src='/ignews.png' />
+            <Image display='block' width='100%' height='auto' borderRadius="10px" w="full" objectFit='cover' src='/ignews.png' />
+
+            <Box position='absolute'
+              top='0'
+              bottom='0'
+              left='0'
+              right='0'
+              height='100%'
+              width='100%'
+              borderRadius="10px"
+              opacity='0'
+              transition='.5s ease'
+              backgroundColor='rgba(14, 14, 14, 0.5)'
+
+              _hover={{
+                opacity: 1,
+              }}
+            >
+              <Link
+                color='white'
+                font-size='20px'
+                position='absolute'
+                top='50%'
+                left='50%'
+                transform='translate(-50%, -50%)'
+                text-align='center'
+                href="https://ignews-jlsnjnr.vercel.app/"
+                target='_blank'
+              >Conheça o projeto</Link>
+            </Box>
           </Flex>
         </Flex>
       </SimpleGrid>

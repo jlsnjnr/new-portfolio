@@ -8,7 +8,30 @@ export const Contact = () => {
       <Heading fontSize="32px">Vamos conversar 😁</Heading>
       <Text fontSize="16px" fontWeight="bold" py="15px" display="block">São José dos Campos - SP</Text>
       <Text fontWeight="bold" fontSize={["18px", "26px"]} py="15px">contato.joelsonjunior@gmail.com</Text>
-      <Button my="20px" w="260px" h="55px" fontSize={["16px", "20px"]} bg="#7206C2" rightIcon={<FaWhatsapp />}>Fale comigo</Button>
+
+      <Link
+        borderRadius={["10px", "15px"]}
+        href='https://wa.me/5512997972034'
+        target='_blank'
+        display='flex'
+        alignItems='center'
+        justifyContent='center'
+        gap='10px'
+        my="20px"
+        w="260px"
+        h="55px"
+        fontSize={["16px", "20px"]}
+        bg="#7206C2"
+        mx="auto"
+        _hover={{
+          textDecoration: 'none'
+        }}
+
+      >
+        <Text>Fale comigo</Text>
+        <FaWhatsapp />
+      </Link>
+
       <Flex gap="6" justifyContent='center' py="20px">
         <Link href="https://www.instagram.com/jnrandradx/" target="_blank"><FiInstagram size={26} color="#7206C2" /></Link>
         <Link href="https://www.linkedin.com/in/jlsnjnr/" target="_blank"><FiLinkedin size={26} color="#7206C2" /></Link>

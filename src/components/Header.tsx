@@ -1,6 +1,5 @@
-import { Button, Flex, Image, Link, useColorMode, useDisclosure } from "@chakra-ui/react"
+import { Flex, Image, Link, Text, useColorMode } from "@chakra-ui/react"
 import { FaWhatsapp } from "react-icons/fa";
-import { useAboutMe } from "../context/AboutMeContext";
 import User from '/user.png';
 
 export const Header = () => {
@@ -26,28 +25,35 @@ export const Header = () => {
           </Flex>
         </Flex>
 
-        <Flex alignItems='center' gap='20px'>
-          <Button
-            rightIcon={<FaWhatsapp />}
-            w={['150px', '240px']}
-            h={['45px', '60px']}
-            border="1px solid #fff"
-            borderColor='white.50'
-            bg='transparent'
-            borderRadius={["10px", "15px"]}
-          >
-            Contato
-          </Button>
+        <Link
+          w={['150px', '240px']}
+          h={['45px', '60px']}
+          border="1px solid #fff"
+          borderColor='white.50'
+          bg='transparent'
+          borderRadius={["10px", "15px"]}
+          href='https://wa.me/5512997972034'
+          target='_blank'
+          display='flex'
+          alignItems='center'
+          justifyContent='center'
+          gap='10px'
+          _hover={{
+            textDecoration: 'none'
+          }}
+        >
+          <Text>Contato</Text>
+          <FaWhatsapp />
+        </Link>
 
-          {/* feature: add darkmode */}
-          {/* 
+        {/* feature: add darkmode */}
+        {/* 
             <Button
               onClick={() => toggleColorMode()} id="alternar-modo-cor"
             >
               {colorMode === 'dark' ? <Text>☀️</Text> : <Text>🌑</Text>}
             </Button> 
           */}
-        </Flex>
       </Flex>
     </>
   )

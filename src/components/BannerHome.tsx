@@ -12,7 +12,7 @@ import Atom from "/Atom.png";
 import Code from "/Code.png";
 import FigmaLogo from "/FigmaLogo.png";
 import Lightbulb from "/Lightbulb.png";
-import { FiInstagram, FiLinkedin, FiGithub } from "react-icons/fi";
+import { FiInstagram, FiLinkedin, FiGithub, FiYoutube } from "react-icons/fi";
 import { useAboutMe } from "../context/AboutMeContext";
 
 export const BannerHome = () => {
@@ -50,6 +50,7 @@ export const BannerHome = () => {
           <Link href="https://www.instagram.com/jnrandradx/" target="_blank"><FiInstagram size={26} color="#7206C2" /></Link>
           <Link href="https://www.linkedin.com/in/jlsnjnr/" target="_blank"><FiLinkedin size={26} color="#7206C2" /></Link>
           <Link href="https://github.com/jlsnjnr" target="_blank"><FiGithub size={26} color="#7206C2" /></Link>
+          <Link href="https://www.youtube.com/channel/UCFIt7cxHoaKYFrUleWYLTHQ" target="_blank"><FiYoutube size={26} color="#7206C2" /></Link>
         </Flex>
       </Flex>
 

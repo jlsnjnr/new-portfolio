@@ -29,27 +29,11 @@ export const AboutMe = () => {
 
               <Flex flexDir="column">
                 <Heading textAlign={["center", "left"]} fontSize={["22px", "26px"]} my="20px">
-                  Bem vindo(a)! 👋
+                  Olá!👋
                 </Heading>
                 <Text textAlign={["center", "left"]} maxW={["100%", "390px"]} color="#828282" fontSize="16px">
-                  Meu nome é Joelson, mas todos me chamam de Júnior. Atualmente tenho 20
-                  anos e trabalho focado como desenvolvedor front-end. Aqui você vai
-                  encontrar um pouco das minhas experiências.
+                  Quer me conhecer um pouco mais? Eu trabalho com desenvolvimento de software a 3 anos, comecei com php e migrei para o JavaScript. No meu tempo livre sempre busco aprimorar o melhor em mim, gosto de me exercitar, praticar esportes, jogar e também estudar :p
                 </Text>
-
-                <Button
-                  rightIcon={<FaWhatsapp />}
-                  w={['150px', '180px']}
-                  h={['45px', '50px']}
-                  border="1px solid #fff"
-                  borderColor='white.50'
-                  bg='transparent'
-                  borderRadius={["10px", "15px"]}
-                  my="20px"
-                  mx={["auto", "0"]}
-                >
-                  Contato
-                </Button>
               </Flex>
             </Flex>
           </ModalBody>
