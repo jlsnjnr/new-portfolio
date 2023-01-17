@@ -49,6 +49,7 @@ export const LastJobs = () => {
           pos="absolute"
           top="0"
           right="20px"
+          zIndex='8'
         >
           <Flex
             alignItems="center"
@@ -59,7 +60,7 @@ export const LastJobs = () => {
             border="1px dashed #7206C2"
           />
         </Flex>
-        <Box pos="absolute" top="35px" right="55px">
+        <Box pos="absolute" zIndex='8' top="35px" right="55px">
           <FiTrendingUp color="#7206C2" size={24} />
         </Box>
 
@@ -73,7 +74,14 @@ export const LastJobs = () => {
             w="full"
             bg="#0E0E0E"
           >
-            <Image display='block' width='100%' height='auto' borderRadius="10px" w="full" objectFit='cover' src='/poke.png' />
+            <Image
+              display='block'
+              width='100%'
+              borderRadius="10px"
+              w="full"
+              objectFit='cover'
+              src='/poke.png'
+            />
 
             <Box position='absolute'
               top='0'
@@ -240,7 +248,7 @@ export const LastJobs = () => {
             borderRadius="10px"
             position='relative'
             my="15px"
-            h="253px"
+            h="277px"
             w="full"
             bg="#0E0E0E"
           >
@@ -282,7 +290,7 @@ export const LastJobs = () => {
             borderRadius="10px"
             position='relative'
             my="15px"
-            h="237px"
+            h="213px"
             w="full"
             bg="#0E0E0E"
           >
