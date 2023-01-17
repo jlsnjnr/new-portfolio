@@ -38,8 +38,10 @@ export const Header = () => {
           alignItems='center'
           justifyContent='center'
           gap='10px'
+          transition='0.5s'
           _hover={{
-            textDecoration: 'none'
+            textDecoration: 'none',
+            border: "1px solid #e4e4e4"
           }}
         >
           <Text>Contato</Text>

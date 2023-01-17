@@ -40,7 +40,7 @@ export const BannerHome = () => {
         </Text>
 
         <Flex my="50px" alignItems="center" justifyContent={["center", "flex-start"]} flexDir={["column", "row"]} gap={["30px", "90px"]}>
-          <Button onClick={onOpen} w={["180px", "200px"]} h="50px" background="#7206C2">
+          <Button transition='0.5s' _hover={{ backgroundColor: '#6507ad' }} onClick={onOpen} w={["180px", "200px"]} h="50px" background="#7206C2">
             Um pouco sobre mim
           </Button>
           <Link download href="Curriculo.pdf">Baixar CV</Link>

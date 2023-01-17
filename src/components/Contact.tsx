@@ -22,13 +22,15 @@ export const Contact = () => {
         h="55px"
         fontSize={["16px", "20px"]}
         bg="#7206C2"
+        transition='0.5s'
         mx="auto"
         _hover={{
-          textDecoration: 'none'
+          textDecoration: 'none',
+          backgroundColor: '#6507ad'
         }}
 
       >
-        <Text>Fale comigo</Text>
+        <Text fontSize='16px'>Fale comigo</Text>
         <FaWhatsapp />
       </Link>
 
