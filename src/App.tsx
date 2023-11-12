@@ -1,3 +1,4 @@
+import React, { useRef, useContext, useEffect, useState } from "react";
 import { Box, Container, Flex } from "@chakra-ui/react";
 import { AboutMe } from "./components/AboutMe";
 import { BannerHome } from "./components/BannerHome";
@@ -5,18 +6,33 @@ import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
 import { LastJobs } from "./components/LastJobs";
 import { Services } from "./components/Services";
-import { useRef, useContext } from "react";
 import { ScrollContext } from "./utils/ScrollObserver";
 
 const App = () => {
   const refContainer = useRef<HTMLDivElement>(null);
+  const [containerHeight, setContainerHeight] = useState<number>(0);
   const { scrollY } = useContext(ScrollContext);
 
   let progress = 0;
 
   const { current: elContainer } = refContainer;
 
-  if (elContainer) progress = Math.min(1, scrollY / elContainer.clientHeight);
+  useEffect(() => {
+    if (elContainer) {
+      setContainerHeight(elContainer.clientHeight);
+    }
+  }, [elContainer]);
+
+  if (containerHeight !== 0) {
+    progress = Math.min(1, scrollY / containerHeight);
+  }
+
+  const containerStyle = {
+    transform: `translateY(-${progress * 100}vh)`,
+    position: "sticky",
+    top: 0,
+    zIndex: 1,
+  };
 
   return (
     <>
@@ -30,15 +46,10 @@ const App = () => {
       >
         <Container // @ts-ignore
           ref={elContainer}
-          position="sticky"
-          top="0"
-          style={{
-            transform: `translateY(-${progress * 100}vh)`,
-          }}
+          style={containerStyle}
           mx="auto"
           py="40px"
           maxW="container.lg"
-          zIndex={0}
         >
           <Header />
           <BannerHome />
