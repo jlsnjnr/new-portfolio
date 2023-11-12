@@ -44,7 +44,7 @@ const App = () => {
           <BannerHome />
         </Container>
 
-        <Box bg="#171923" zIndex={10}>
+        <Box bg="#171923" zIndex={999}>
           <Services />
           <LastJobs />
           <Contact />
