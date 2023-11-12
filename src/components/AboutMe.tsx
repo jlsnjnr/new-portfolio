@@ -10,7 +10,6 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import { FaWhatsapp } from "react-icons/fa";
 import { useAboutMe } from "../context/AboutMeContext";
 import Im from "/im2.jpg";
 

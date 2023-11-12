@@ -33,11 +33,12 @@ const App = () => {
           position="sticky"
           top="0"
           style={{
-            transform: `translateY(-${progress * 10}vh)`,
+            transform: `translateY(-${progress * 100}vh)`,
           }}
           mx="auto"
           py="40px"
           maxW="container.lg"
+          zIndex={0}
         >
           <Header />
           <BannerHome />
