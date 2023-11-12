@@ -23,3 +23,24 @@
 .bg {
   background: rgba(14, 14, 14, 0.5);
 }
+
+.container-body {
+  height: 200px;
+}
+
+.bg-container {
+  position: relative;
+  width: 70% !important;
+  height: 400px;
+  margin: auto;
+  margin-top: 55%;
+}
+
+.bg-container h1 {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 70px;
+}
