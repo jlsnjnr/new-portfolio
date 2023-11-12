@@ -19,7 +19,12 @@ export const BannerHome = () => {
   const { onOpen } = useAboutMe();
 
   return (
-    <Flex flexDir={["column", "row"]} alignItems="center" gap="60px 40px">
+    <Flex
+      mt={["40px", ""]}
+      flexDir={["column", "row"]}
+      alignItems="center"
+      gap="60px 40px"
+    >
       <Flex pos="relative" flexDirection="column">
         <Text
           pos="absolute"
@@ -30,32 +35,72 @@ export const BannerHome = () => {
         >
           Olá
         </Text>
-        <Heading textAlign={["center", "left"]} fontSize={["34px", "46px"]} my="20px">
+        <Heading
+          textAlign={["center", "left"]}
+          fontSize={["26px", "46px"]}
+          my="20px"
+        >
           Bem vindo(a)! 👋
         </Heading>
-        <Text textAlign={["center", "left"]} maxW={["100%", "390px"]} color="#828282" fontSize="16px">
-          Meu nome é Joelson, mas todos me chamam de Júnior. Atualmente tenho 20
-          anos e trabalho focado como desenvolvedor front-end. Aqui você vai
+        <Text
+          textAlign={["center", "left"]}
+          maxW={["100%", "390px"]}
+          color="#828282"
+          fontSize={["14px", "16px"]}
+        >
+          Meu nome é Joelson, mas todos me chamam de Júnior. Atualmente tenho 21
+          anos e trabalho focado como desenvolvedor mobile. Aqui você vai
           encontrar um pouco das minhas experiências.
         </Text>
 
-        <Flex my="50px" alignItems="center" justifyContent={["center", "flex-start"]} flexDir={["column", "row"]} gap={["30px", "90px"]}>
-          <Button transition='0.5s' _hover={{ backgroundColor: '#6507ad' }} onClick={onOpen} w={["180px", "200px"]} h="50px" background="#7206C2">
+        <Flex
+          my={["20px", "50px"]}
+          alignItems="center"
+          justifyContent={["center", "flex-start"]}
+          flexDir={["column", "row"]}
+          gap={["30px", "90px"]}
+        >
+          <Button
+            transition="0.5s"
+            _hover={{ backgroundColor: "#6507ad" }}
+            onClick={onOpen}
+            w={["180px", "200px"]}
+            h="50px"
+            background="#7206C2"
+          >
             Um pouco sobre mim
           </Button>
-          <Link download href="Curriculo.pdf">Baixar CV</Link>
+          <Link download href="/Curriculo.pdf">
+            Baixar CV
+          </Link>
         </Flex>
 
         <Flex justifyContent={["center", "flex-start"]} gap="6">
-          <Link href="https://www.instagram.com/jnrandradx/" target="_blank"><FiInstagram size={26} color="#7206C2" /></Link>
-          <Link href="https://www.linkedin.com/in/jlsnjnr/" target="_blank"><FiLinkedin size={26} color="#7206C2" /></Link>
-          <Link href="https://github.com/jlsnjnr" target="_blank"><FiGithub size={26} color="#7206C2" /></Link>
-          <Link href="https://www.youtube.com/channel/UCFIt7cxHoaKYFrUleWYLTHQ" target="_blank"><FiYoutube size={26} color="#7206C2" /></Link>
+          <Link href="https://www.instagram.com/jnrandradx/" target="_blank">
+            <FiInstagram size={26} color="#7206C2" />
+          </Link>
+          <Link href="https://www.linkedin.com/in/jlsnjnr/" target="_blank">
+            <FiLinkedin size={26} color="#7206C2" />
+          </Link>
+          <Link href="https://github.com/jlsnjnr" target="_blank">
+            <FiGithub size={26} color="#7206C2" />
+          </Link>
+          <Link
+            href="https://www.youtube.com/channel/UCFIt7cxHoaKYFrUleWYLTHQ"
+            target="_blank"
+          >
+            <FiYoutube size={26} color="#7206C2" />
+          </Link>
         </Flex>
       </Flex>
 
-      <Box ml="auto" position="relative">
-        <Image mx={["auto", "0"]} maxW={["80%", "400px"]} src={Bg} alt="Background" />
+      <Box ml="auto" display={["none", "block"]} position="relative">
+        <Image
+          mx={["auto", "0"]}
+          maxW={["0%", "400px"]}
+          src={Bg}
+          alt="Background"
+        />
         <Flex
           className="image"
           align="center"

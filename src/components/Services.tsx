@@ -3,9 +3,11 @@ import { FiCode, FiFigma } from "react-icons/fi";
 
 export const Services = () => {
   return (
-    <Box bg="#0E0E0E" borderRadius="40px" mt="120px">
+    <Box bg="#0E0E0E" borderRadius="40px" py="50px">
       <Container maxW="container.lg" mx="auto">
-        <Heading color="#B6B6B6" fontSize="38px" pt="60px">Serviços</Heading>
+        <Heading color="#B6B6B6" fontSize="38px" pt="60px">
+          Serviços
+        </Heading>
 
         <Flex
           bg="#08080A"
@@ -15,8 +17,8 @@ export const Services = () => {
           px="40px"
           gap="15px"
           backgroundPosition="right"
-          backgroundRepeat='no-repeat'
-          backgroundImage={['none', '/la.png']}
+          backgroundRepeat="no-repeat"
+          backgroundImage={["none", "/la.png"]}
           my="50px"
         >
           <Flex
@@ -44,8 +46,8 @@ export const Services = () => {
           px="40px"
           gap="15px"
           backgroundPosition="right"
-          backgroundRepeat='no-repeat'
-          backgroundImage={['none', '/home.png']}
+          backgroundRepeat="no-repeat"
+          backgroundImage={["none", "/home.png"]}
           my="50px"
         >
           <Flex

@@ -8,7 +8,7 @@ import { Services } from "./components/Services";
 import { useRef, useContext } from "react";
 import { ScrollContext } from "./utils/ScrollObserver";
 
-const App = () => {
+export const App = () => {
   const refContainer = useRef<HTMLDivElement>(null);
   const { scrollY } = useContext(ScrollContext);
 
@@ -22,39 +22,45 @@ const App = () => {
     <>
       <Flex
         flexDir="column"
-        backgroundSize={["0", "30%"]}
-        backgroundPosition="top right"
+        backgroundSize="100%"
+        backgroundPosition="600px -1300px"
         backgroundRepeat="no-repeat"
         backgroundImage="/Gradiente.png"
         position="relative"
       >
-        <Container // @ts-ignore
+        <Box // @ts-ignore
           ref={elContainer}
           position="sticky"
           top="0"
+          // minHeight={"100vh"}
+          // h="30vh"
+          // display="flex"
+          // flex="1"
+          // bg="red"
+          flexDir="column"
+          alignItems="center"
+          justifyContent="center"
           style={{
-            transform: `translateY(-${progress * 10}vh)`,
+            transform: `translateY(-${progress * 100}vh)`,
           }}
-          mx="auto"
-          py="40px"
           maxW="container.lg"
+          zIndex={-10}
+          mx="auto"
         >
+          <Box>
+            <Header />
+            <BannerHome />
+          </Box>
+        </Box>
+        <Services />
+        <LastJobs />
+        <Contact />
+        <Container maxW="container.lg" mx="auto">
           <Header />
-          <BannerHome />
         </Container>
 
-        <Box bg="#171923" zIndex={10}>
-          <Services />
-          <LastJobs />
-          <Contact />
-          <Container maxW="container.lg" mx="auto">
-            <Header />
-          </Container>
-          <AboutMe />
-        </Box>
+        <AboutMe />
       </Flex>
     </>
   );
 };
-
-export default App;
