@@ -3,7 +3,7 @@ import { FiCode, FiFigma } from "react-icons/fi";
 
 export const Services = () => {
   return (
-    <Box bg="#0E0E0E" borderRadius="40px" py="50px">
+    <Box bg="#0E0E0E" zIndex={999} borderRadius="40px" py="50px">
       <Container maxW="container.lg" mx="auto">
         <Heading color="#B6B6B6" fontSize="38px" pt="60px">
           Serviços

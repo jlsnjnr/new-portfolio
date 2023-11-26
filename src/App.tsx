@@ -63,7 +63,7 @@ const App = () => {
           <Services />
           <LastJobs />
           <Contact />
-          <Container maxW="container.lg" mx="auto">
+          <Container zIndex={999} maxW="container.lg" mx="auto">
             <Header />
           </Container>
           <AboutMe />
