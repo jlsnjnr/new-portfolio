@@ -1,55 +1,24 @@
-import React, { useRef, useContext, useEffect, useState } from "react";
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Container, Image } from "@chakra-ui/react";
 import { AboutMe } from "./components/AboutMe";
 import { BannerHome } from "./components/BannerHome";
 import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
 import { LastJobs } from "./components/LastJobs";
 import { Services } from "./components/Services";
-import { ScrollContext } from "./utils/ScrollObserver";
+import { Parallax } from "react-scroll-parallax";
 
 const App = () => {
-  const refContainer = useRef<HTMLDivElement>(null);
-  const [containerHeight, setContainerHeight] = useState<number>(0);
-  const { scrollY } = useContext(ScrollContext);
-
-  let progress = 0;
-
-  const { current: elContainer } = refContainer;
-
-  useEffect(() => {
-    if (elContainer) {
-      setContainerHeight(elContainer.clientHeight);
-    }
-  }, [elContainer]);
-
-  if (containerHeight !== 0) {
-    progress = Math.min(1, scrollY / containerHeight);
-  }
-
-  const containerStyle = {
-    transform: `translateY(-${progress * 100}vh)`,
-    "-webkit-transform": `translateY(-${progress * 100}vh)`,
-    top: 0,
-    zIndex: 0,
-    willChange: "transform",
-  };
-
   return (
     <>
-      <Flex
-        flexDir="column"
-        backgroundSize={["0", "30%"]}
-        backgroundPosition="top right"
-        backgroundRepeat="no-repeat"
-        backgroundImage="/Gradiente.png"
-        position="relative"
-      >
-        <Container // @ts-ignore
-          ref={elContainer}
-          // @ts-ignore
-          style={containerStyle}
-          position="sticky"
+      <Image
+        src="/Gradiente.png"
+        position="absolute"
+        w={["100%", "30%"]}
+        right={0}
+      />
+
+      <Parallax translateY={[-50, 50]}>
+        <Container
           mx="auto"
           display="flex"
           overflow="visible"
@@ -61,15 +30,18 @@ const App = () => {
           <Header />
           <BannerHome />
         </Container>
+      </Parallax>
 
+      <Parallax>
         <Services />
         <LastJobs />
         <Contact />
-        <Container bg="#171923" zIndex={10} maxW="container.lg" mx="auto">
+        <Container zIndex={10} maxW="container.lg" mx="auto">
           <Header />
         </Container>
-        <AboutMe />
-      </Flex>
+      </Parallax>
+
+      <AboutMe />
     </>
   );
 };

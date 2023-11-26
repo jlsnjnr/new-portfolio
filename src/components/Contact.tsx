@@ -7,7 +7,6 @@ export const Contact = () => {
     <Container
       zIndex={10}
       color="#B6B6B6"
-      bg="#171923"
       maxW="container.lg"
       mx="auto"
       textAlign="center"
