@@ -31,7 +31,7 @@ const App = () => {
     transform: `translateY(-${progress * 100}vh)`,
     position: "sticky",
     top: 0,
-    zIndex: 1,
+    zIndex: 0,
   };
 
   return (
@@ -50,6 +50,7 @@ const App = () => {
           style={containerStyle}
           mx="auto"
           display="flex"
+          overflow="visible"
           flexDir="column"
           maxW="container.lg"
           justifyContent={["space-evenly", "center"]}
