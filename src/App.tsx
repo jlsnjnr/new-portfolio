@@ -31,7 +31,7 @@ const App = () => {
     transform: `translateY(-${progress * 100}vh)`,
     "-webkit-transform": `translateY(-${progress * 100}vh)`,
     top: 0,
-    zIndex: 1,
+    zIndex: 0,
     willChange: "transform",
   };
 
@@ -49,7 +49,7 @@ const App = () => {
           ref={elContainer}
           // @ts-ignore
           style={containerStyle}
-          position={["-webkit-sticky", "sticky"]}
+          position="sticky"
           mx="auto"
           display="flex"
           overflow="visible"
@@ -62,15 +62,13 @@ const App = () => {
           <BannerHome />
         </Container>
 
-        <Box bg="#171923" zIndex={10}>
-          <Services />
-          <LastJobs />
-          <Contact />
-          <Container zIndex={10} maxW="container.lg" mx="auto">
-            <Header />
-          </Container>
-          <AboutMe />
-        </Box>
+        <Services />
+        <LastJobs />
+        <Contact />
+        <Container bg="#171923" zIndex={10} maxW="container.lg" mx="auto">
+          <Header />
+        </Container>
+        <AboutMe />
       </Flex>
     </>
   );

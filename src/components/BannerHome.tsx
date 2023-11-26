@@ -23,7 +23,7 @@ export const BannerHome = () => {
       <Flex pos="relative" flexDirection="column">
         <Text
           pos="absolute"
-          left={["0", "-25px"]}
+          left={["0", "-15px"]}
           style={{ transform: "rotate(-45deg)" }}
           color="#7206C2"
           fontWeight="bold"
