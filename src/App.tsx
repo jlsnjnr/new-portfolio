@@ -30,7 +30,6 @@ const App = () => {
   const containerStyle = {
     transform: `translateY(-${progress * 100}vh)`,
     "-webkit-transform": `translateY(-${progress * 100}vh)`,
-    position: "sticky",
     top: 0,
     zIndex: 1,
     willChange: "transform",
@@ -50,6 +49,7 @@ const App = () => {
           ref={elContainer}
           // @ts-ignore
           style={containerStyle}
+          position={["-webkit-sticky", "sticky"]}
           mx="auto"
           display="flex"
           overflow="visible"
