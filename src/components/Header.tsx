@@ -8,14 +8,14 @@ export const Header = () => {
       <Flex
         alignItems="center"
         justifyContent="space-between"
-        my={["", "40px"]}
+        my={["", "10px"]}
       >
-        <Flex alignItems="center" gap="40px">
+        <Flex alignItems="center" gap="20px">
           <Flex
             alignItems="center"
             justifyContent="center"
-            w="100px"
-            h="100px"
+            w="80px"
+            h="80px"
             borderRadius="full"
             backgroundColor="#110F0F"
           >
@@ -25,7 +25,7 @@ export const Header = () => {
 
         <Link
           w={["150px", "240px"]}
-          h={["45px", "60px"]}
+          h={["45px", "50px"]}
           border="1px solid #fff"
           borderColor="white.50"
           bg="transparent"

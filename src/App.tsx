@@ -46,10 +46,14 @@ const App = () => {
       >
         <Container // @ts-ignore
           ref={elContainer}
+          // @ts-ignore
           style={containerStyle}
           mx="auto"
-          py="40px"
+          display="flex"
+          flexDir="column"
           maxW="container.lg"
+          justifyContent={["space-evenly", "center"]}
+          height="100vh"
         >
           <Header />
           <BannerHome />

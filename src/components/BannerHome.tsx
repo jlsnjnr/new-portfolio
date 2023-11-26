@@ -19,12 +19,7 @@ export const BannerHome = () => {
   const { onOpen } = useAboutMe();
 
   return (
-    <Flex
-      mt={["40px", ""]}
-      flexDir={["column", "row"]}
-      alignItems="center"
-      gap="60px 40px"
-    >
+    <Flex mt={["40px", ""]} flexDir={["column", "row"]} alignItems="center">
       <Flex pos="relative" flexDirection="column">
         <Text
           pos="absolute"
@@ -37,7 +32,7 @@ export const BannerHome = () => {
         </Text>
         <Heading
           textAlign={["center", "left"]}
-          fontSize={["26px", "46px"]}
+          fontSize={["26px", "36px"]}
           my="20px"
         >
           Bem vindo(a)! 👋
@@ -46,7 +41,7 @@ export const BannerHome = () => {
           textAlign={["center", "left"]}
           maxW={["100%", "390px"]}
           color="#828282"
-          fontSize={["14px", "16px"]}
+          fontSize={["14px", "14px"]}
         >
           Meu nome é Joelson, mas todos me chamam de Júnior. Atualmente tenho 21
           anos e trabalho focado como desenvolvedor mobile. Aqui você vai
@@ -97,7 +92,7 @@ export const BannerHome = () => {
       <Box ml="auto" display={["none", "block"]} position="relative">
         <Image
           mx={["auto", "0"]}
-          maxW={["0%", "400px"]}
+          maxW={["0%", "320px"]}
           src={Bg}
           alt="Background"
         />
