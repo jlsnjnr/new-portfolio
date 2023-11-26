@@ -29,9 +29,11 @@ const App = () => {
 
   const containerStyle = {
     transform: `translateY(-${progress * 100}vh)`,
+    "-webkit-transform": `translateY(-${progress * 100}vh)`,
     position: "sticky",
     top: 0,
-    zIndex: 0,
+    zIndex: 1,
+    willChange: "transform",
   };
 
   return (
@@ -60,11 +62,11 @@ const App = () => {
           <BannerHome />
         </Container>
 
-        <Box bg="#171923" zIndex={999}>
+        <Box bg="#171923" zIndex={10}>
           <Services />
           <LastJobs />
           <Contact />
-          <Container zIndex={999} maxW="container.lg" mx="auto">
+          <Container zIndex={10} maxW="container.lg" mx="auto">
             <Header />
           </Container>
           <AboutMe />

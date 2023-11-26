@@ -27,7 +27,7 @@ export const LastJobs = () => {
     : `${spin} infinite 20s linear`;
 
   return (
-    <Container maxW="container.lg" mx="auto" zIndex={999}>
+    <Container maxW="container.lg" mx="auto" zIndex={10}>
       <Heading color="#B6B6B6" fontSize="38px" pt="60px">
         Últimos Trabalhos
       </Heading>

@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export const Contact = () => {
   return (
     <Container
-      zIndex={999}
+      zIndex={10}
       color="#B6B6B6"
       maxW="container.lg"
       mx="auto"
